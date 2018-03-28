@@ -88,17 +88,9 @@ def generator(images,steeringAngles, batch_size=32):
             batch_images = images[offset:offset+batch_size]
             print(len(batch_images))
             batch_steeringAngles = steeringAngles[offset:offset+batch_size]
-            final_images=[]
-            final_steerinAngles=[]
-            
-            for batch_image in batch_images :
-                final_images.append(batch_image)
-            for batch_steeringAngle in batch_steeringAngles :
-                final_steerinAngles.append(batch_steeringAngle)
-                    
-            x_train=np.array(final_images)
-            y_train=np.array(final_steerinAngles)
-            yield sklearn.utils.shuffle(x_train, y_train)
+            x_train=np.array(batch_images)
+            y_train=np.array(batch_steeringAngles)
+            yield x_train, y_train
 
 train_generator = generator(train_images,train_steeringAngles, batch_size=32)
 validation_generator = generator(validation_images,validation_steeringAngles, batch_size=32)
