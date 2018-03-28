@@ -12,6 +12,7 @@ from keras.layers.core import Dense,Flatten
 from keras.layers.convolutional import Convolution2D
 import sklearn
 from sklearn.model_selection import train_test_split
+from tensorflow.contrib.slim.python.slim.nets.resnet_utils import subsample
 
 
 
@@ -86,7 +87,6 @@ def generator(images,steeringAngles, batch_size=32):
         sklearn.utils.shuffle(images,steeringAngles)
         for offset in range(0, num_samples, batch_size):
             batch_images = images[offset:offset+batch_size]
-            print(len(batch_images))
             batch_steeringAngles = steeringAngles[offset:offset+batch_size]
             x_train=np.array(batch_images)
             y_train=np.array(batch_steeringAngles)
@@ -94,13 +94,13 @@ def generator(images,steeringAngles, batch_size=32):
 
 train_generator = generator(train_images,train_steeringAngles, batch_size=32)
 validation_generator = generator(validation_images,validation_steeringAngles, batch_size=32)
-print(len(next(train_generator)[0]))
+
 """Model"""
 
 model = Sequential()
-model.add(Convolution2D(24, 5, 5,activation="relu",input_shape=(64,64,3)))
-model.add(Convolution2D(36, 5, 5,activation='relu'))
-model.add(Convolution2D(48, 5, 5,activation='relu'))
+model.add(Convolution2D(24, 5, 5,subsample=(2,2),activation="relu",input_shape=(64,64,3)))
+model.add(Convolution2D(36, 5, 5,subsample=(2,2),activation='relu'))
+model.add(Convolution2D(48, 5, 5,subsample=(2,2),activation='relu'))
 model.add(Flatten())
 model.add(Dense(50))
 model.add(Dense(10))
