@@ -98,8 +98,8 @@ I finally randomly shuffled the data set and put 20% of the data into a validati
 I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 2 as evidenced by very small value of validation loss(0.016). I used an adam optimizer so that manually training the learning rate wasn't necessary.
 
 
-####Using the above explained model the car is able to complete the first track successfully and some part of the second track. Below are the links to the result videos of above model.
-#### Track 1(https://www.youtube.com/watch?v=vqv3uXBgUbo&feature=youtu.be "Track 1")
-#### Track 2(https://www.youtube.com/watch?v=SaKhMkTKJNM&feature=youtu.be "Track 2")
+#### Using the above explained model the car is able to complete the first track successfully and some part of the second track. Below are the links to the result videos of above model.
+#### [Track 1](https://www.youtube.com/watch?v=vqv3uXBgUbo&feature=youtu.be "Titel")
+#### [Track 2](https://www.youtube.com/watch?v=SaKhMkTKJNM&feature=youtu.be "Titel")
 
-#### Click here(/model.py/) to view model.py.
+#### Click [here](/model.py/) to view model.py.
