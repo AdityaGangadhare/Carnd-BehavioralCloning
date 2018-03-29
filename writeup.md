@@ -61,7 +61,7 @@ My first step was to use a convolution neural network model similar to the LeNet
 
 In order to gauge how well the model was working, I split my image and steering angle data into a training and validation set.
 
-Initially I used LeNet but the car was not able to complete the track and failed to recovr at sharp turns. In the next attempt i used NVIDIA architecture the car was able to complete the track. But as the architecture is complex, model took more time to train. In an attempt to reduce the complexity of the model I removed two convolutional layers and two fully connected layers. Now with only three convolutional layers and three fully connected layers 
+Initially I used LeNet but the car was not able to complete the track and failed to recover at sharp turns. In the next attempt I used NVIDIA architecture then the car was able to complete the track. But as the architecture is complex, model took more time to train. In an attempt to reduce the complexity of the model I removed two convolutional layers and two fully connected layers. Now with only three convolutional layers and three fully connected layers I trained the model and got a vely small validation loss in just two epochs. 
 
 The final step was to run the simulator to see how well the car was driving around track one. There were a few spots where the vehicle fell off the track, to improve the driving behavior in these cases, data preprocessing and augmentation is done.
 
