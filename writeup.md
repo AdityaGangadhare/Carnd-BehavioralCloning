@@ -1,22 +1,14 @@
 # **Behavioral Cloning** 
-
-## Writeup Template
-
-### You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
-
 ---
 
 **Behavioral Cloning Project**
 
 [//]: # (Image References)
 
-[image1]: ./examples/placeholder.png "Model Visualization"
-[image2]: ./examples/placeholder.png "Grayscaling"
-[image3]: ./examples/placeholder_small.png "Recovery Image"
-[image4]: ./examples/placeholder_small.png "Recovery Image"
-[image5]: ./examples/placeholder_small.png "Recovery Image"
-[image6]: ./examples/placeholder_small.png "Normal Image"
-[image7]: ./examples/placeholder_small.png "Flipped Image"
+[image1]: ./Writup_Images/Unprocessed.JPG "Unprocessed Images"
+[image2]: ./Writup_Images/Flipped.JPG "Flipped Images"
+[image3]: ./Writup_Images/Cropped.JPG "Cropped Images"
+[image4]: ./Writup_Images/Normalized.JPG "Normalized Images"
 
 ---
 ### Files Submitted & Code Quality
@@ -88,27 +80,20 @@ The final model architecture consisted of a convolution neural network with the 
 
 #### 3. Creation of the Training Set & Training Process
 
-I have used the dataset provided by udacity to train my model Here is an example images from center, left and right camras.
+I have used the dataset provided by udacity to train my model.
+I used the images from left and right cameras so that the car would learn to recover from the left side and right sides of the road back to center. Here is an example images from center, left and right camras.
 
-![alt text][image2]
+![Original Images][image1]
 
-I used the images from left and right cameras so that the car would learn to recover from the left side and right sides of the road back to center
-
-![alt text][image3]
-![alt text][image4]
-![alt text][image5]
 
 To augment the data set, I also flipped images and angles from all cameras thinking that this would generate more data and all the turn scenarios are covered For example, here is an image that has then been flipped:
 
-![alt text][image6]
-![alt text][image7]
+![Flipped Images][image2]
 
-After the collection process, I had six ties the  number of data points provided by udacity dataset. I then preprocessed this data by cropping, resizing and 
-normalizing all the images.
+After the collection process, I had six times the number of data points provided by udacity dataset. I then preprocessed this data by cropping, resizing and normalizing all the images.
 
-![alt text][image6]
-![alt text][image7]
+![Cropped Images][image3]
+![Normalized Images][image4]
 
-I finally randomly shuffled the data set and put Y% of the data into a validation set. 
-
+I finally randomly shuffled the data set and put 20% of the data into a validation set. 
 I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 2 as evidenced by very small value of validation loss(0.016) I used an adam optimizer so that manually training the learning rate wasn't necessary.
