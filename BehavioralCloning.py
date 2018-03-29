@@ -63,7 +63,7 @@ def preprocess(lines):
         image_r=normalizeImage(resizeImage(cropImage(image_r)))
                     
         steeringAngle_c=float(line[3])
-        steeringAngle_l=float(line[3])+correction
+        steeringAngle_l=float(line[3])+correction+0.05
         steeringAngle_r=float(line[3])-correction
                     
         flipped_c=flipImage(image_c)
