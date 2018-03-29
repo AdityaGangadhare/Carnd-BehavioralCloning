@@ -51,7 +51,7 @@ The model used an adam optimizer, so the learning rate was not tuned manually.
 
 #### 4. Appropriate training data
 
-Training data was chosen to keep the vehicle driving on the road. I used images from all the three cameras(center, left and right) to train and validae the model. I used the udacity dataset for training and validation.
+Training data was chosen to keep the vehicle driving on the road. I used images from all the three cameras(center, left and right) to train and validate the model. I used the udacity dataset for training and validation.
 
 ### Model Architecture and Training Strategy
 
