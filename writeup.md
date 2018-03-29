@@ -85,7 +85,6 @@ I used the images from left and right cameras so that the car would learn to rec
 
 ![Original Images][image1]
 
-
 To augment the data set, I also flipped images and angles from all cameras thinking that this would generate more data and all the turn scenarios are covered For example, here is an image that has then been flipped:
 
 ![Flipped Images][image2]
@@ -96,4 +95,4 @@ After the collection process, I had six times the number of data points provided
 ![Normalized Images][image4]
 
 I finally randomly shuffled the data set and put 20% of the data into a validation set. 
-I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 2 as evidenced by very small value of validation loss(0.016) I used an adam optimizer so that manually training the learning rate wasn't necessary.
+I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 2 as evidenced by very small value of validation loss(0.016). I used an adam optimizer so that manually training the learning rate wasn't necessary.
