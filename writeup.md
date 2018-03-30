@@ -37,13 +37,13 @@ The model.py file contains the code for training and saving the convolution neur
 
 My model consists of a convolution neural network with 5x5 filter sizes and depths between 24 and 48. 
 
-The model includes RELU layers to introduce nonlinearity, and the data is normalized in the model using a Keras lambda layer. 
+The model includes RELU layers to introduce nonlinearity, and the data is normalized outside the model but in generator. 
    
 
 #### 2. Attempts to reduce overfitting in the model
 
 The model was trained and validated on different data sets to ensure that the model was not overfitting. The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
-I have splitted the data into two parts 80% data was used for training and 20% for validation.
+I have splitted the data into two parts 80% data was used for training and 20% for validation. Also data augumentation(flipping) is done to reduce overfitting.
 
 #### 3. Model parameter tuning
 
